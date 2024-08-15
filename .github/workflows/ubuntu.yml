@@ -1,0 +1,14 @@
+name: Ubuntu Setup
+
+on: [push]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run setup script
+      run: |
+        chmod +x setup.sh
+        ./setup.sh
